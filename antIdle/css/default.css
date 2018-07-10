@@ -1,2 +1,19 @@
-﻿body {
+﻿/* DOM */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
+
+h1 {
+    text-align:center;
+}
+/* CLASS */
+
+/* ID */
+#dvContain {
+    box-shadow: 0 0 1px black, 0 0 1.5px black, 0 0 2px black;
+}
+
+/* keyframes */
