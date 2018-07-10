@@ -63,16 +63,45 @@
         bySel: (x) => { return document.querySelector(x); },
         bySelAll: (x) => { return document.querySelectorAll(x) },
         byTag: (x, y) => { return document.getElementsByTagName(x)[y]; },
+
         /* primary app functions */
         init: () => {
-            var uFrame = myUI.createEle("div");
+            var uFrame = myUI.createEle("div"),
+                stats = myUI.createEle("div"),
+                controls = myUI.createEle("div");
 
-            uFrame.innerHTML = "frame";
-            uFrame.className = "uFrame";
+            controls.innerHTML = "";
+            controls.className = "controls";
+            for (var i = 1; i < 6; i++) {
+                var btns = myUI.createEle("button");
 
+                btns.innerHTML = "btns" + i;
+                btns.className = "cntrlBtns";
+                controls.appendChild(btns);
+            }
+
+            stats.innerHTML = "";
+            stats.className = "stats";
+            for (var i = 1; i < 6; i++) {
+                var sts = myUI.createEle("div");
+
+                sts.innerHTML = i;
+                sts.className = "sts";
+                stats.appendChild(sts);
+            }
+
+            uFrame.innerHTML = "";
+            uFrame.className = "uFrame_pre";
+            uFrame.appendChild(controls);
+            uFrame.appendChild(stats);
 
             dvContain.appendChild(uFrame);
+
+            setTimeout(() => {
+                uFrame.className = "uFrame_full";
+            }, 500);
         }
+
         /* main scope */
 
         /* settings and options */

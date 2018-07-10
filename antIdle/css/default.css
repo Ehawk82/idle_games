@@ -10,9 +10,43 @@ h1 {
     text-align:center;
 }
 /* CLASS */
-
+.uFrame_pre {
+    transition: all 0.8s ease-out;
+    position:absolute;
+    background: black;
+    width: 98%;
+    height: 680px;
+    box-shadow: 0 0 1px silver, 0 0 1.5px silver, 0 0 2px silver;
+    left:-100%;
+}
+.uFrame_full {
+    transition: all 0.8s ease-out;
+    position: absolute;
+    background: #4d2000;
+    width: 98%;
+    height: 680px;
+    box-shadow: 0 0 1px silver, 0 0 1.5px silver, 0 0 2px silver;
+    left:1%;
+}
+.stats {
+    background:grey;
+    width:60px;
+    height:100%;
+    float:right;
+}
+.controls {
+    background: grey;
+    width: 60px;
+    height: 100%;
+    float: left;
+}
+.cntrlBtns, .sts {
+    width:100%;
+}
 /* ID */
 #dvContain {
+    width: 100%;
+    padding: 20px 0;
     box-shadow: 0 0 1px black, 0 0 1.5px black, 0 0 2px black;
 }
 
