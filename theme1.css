@@ -1,0 +1,102 @@
+@media only screen and (max-width: 600px) {
+body div div {
+
+	width:100%;
+	float:none;
+	margin:0;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+body div div {
+
+	width:100%;
+	float:none;
+	margin:0;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+body div div {
+	width:32.9%;
+	float:left;
+	margin:.1%;
+}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+body div div {
+	width:32.9%;
+	float:left;
+	margin:.13%;
+}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+/*DOM*/
+body div div {
+	width:32.9%;
+	float:left;
+	margin:.16%;
+	
+}
+}
+
+/*DOM*/
+body, html {
+	background:#52A854;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+h1 {
+	background-color:#FFF;
+	width:108%;
+	margin-left: -4%;
+	margin-top:0;
+	text-indent:8%;
+	font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 300;
+    box-shadow:0 0 10px #000;
+	
+}
+p {
+	background-color:#FFF;
+	box-shadow:0 0 10px #000;
+	clear:both;
+}
+div {
+	transition:.5s all;
+	background-color:#FFF;
+	box-shadow:0 0 10px #000;
+}
+footer {
+	clear: both;
+    border: 1px groove #aaaaaa;
+    background: rgba(0,0,0,0.6);
+    color: rgba(225,225,225,0.6);
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+	
+}
+/* CLASS */
+.dvClass {
+	background-color:rgba(0,0,0,0.4);
+	display:block;
+	height:auto;
+	padding:1% 0;
+	width:100vw;
+	float:left;
+}
+/* ID */
+
+/* KEYFRAMES */
