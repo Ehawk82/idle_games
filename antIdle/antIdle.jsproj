@@ -86,7 +86,11 @@
     <Content Include="images\ants\pinkAntMovement\pinkAnt2.png" />
     <Content Include="images\ants\pinkAntMovement\pinkAnt1.png" />
     <Content Include="images\ants\pinkAntMovement\pinkAnt.png" />
-    <Content Include="images\ants\purpleAnt.png" />
+    <Content Include="images\ants\purpleAntMovement\purpleAnt4.png" />
+    <Content Include="images\ants\purpleAntMovement\purpleAnt3.png" />
+    <Content Include="images\ants\purpleAntMovement\purpleAnt2.png" />
+    <Content Include="images\ants\purpleAntMovement\purpleAnt1.png" />
+    <Content Include="images\ants\purpleAntMovement\purpleAnt.png" />
     <Content Include="images\ants\yellowAnt.png" />
     <Content Include="images\ants\redAnt.png" />
     <Content Include="images\ants\nullAntMovement\nullAnt.png" />
