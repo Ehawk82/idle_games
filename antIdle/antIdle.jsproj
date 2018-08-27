@@ -58,6 +58,10 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="images\ants\blackAnt4.png" />
+    <Content Include="images\ants\blackAnt2.png" />
+    <Content Include="images\ants\blackAnt3.png" />
+    <Content Include="images\ants\blackAnt1.png" />
     <Content Include="images\ants\orangeAnt.png" />
     <Content Include="images\ants\blackAnt.png" />
     <Content Include="images\ants\greenAnt.png" />
