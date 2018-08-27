@@ -66,6 +66,10 @@
     <Content Include="images\ants\blueAntMovements\blueAnt3.png" />
     <Content Include="images\ants\blueAntMovements\blueAnt1.png" />
     <Content Include="images\ants\blueAntMovements\blueAnt2.png" />
+    <Content Include="images\ants\greenAntMovement\greenAnt4.png" />
+    <Content Include="images\ants\greenAntMovement\greenAnt3.png" />
+    <Content Include="images\ants\greenAntMovement\greenAnt2.png" />
+    <Content Include="images\ants\greenAntMovement\greenAnt1.png" />
     <Content Include="images\ants\orangeAnt.png" />
     <Content Include="images\ants\blackAnt.png" />
     <Content Include="images\ants\greenAnt.png" />
