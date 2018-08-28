@@ -138,6 +138,13 @@ var color = myAnt.id.split('Ant');
 		},
 		
 		beginUserPref: (uFrame) => {
+			var key = {
+				87: false,
+				68: false,
+				65: false,
+				83: false
+				
+			};
 			var uData = localStorage.getItem("userData");
 			var uuu = JSON.parse(uData);
 			
@@ -218,42 +225,92 @@ var color = myAnt.id.split('Ant');
 				}
 				
 			}, 1000);
-			body.onkeydown = (e) => {
-                var kc = e.keyCode || e.which,
-				    myAnt = myUI.bySel(".ants"),
-					map = {};
-					
-				map[e.keyCode] = e.type == 'keydown';
-	
-                if (kc === 87) {
+			body.onkeydown = body.onkeyup = (e) => {
+
+                var myAnt = myUI.bySel(".ants");
+
+				var e = e || event;
+                key[e.keyCode] = e.type == 'keydown';
+	            
+
+                if (key[87] === true && key[68] === false && key[83] === false && key[65] === false) {
 			        myUI.moveAntUp(myAnt);
 				}
-				if (kc === 68) {
-			    //move right
+				if (key[68] === true && key[87] === false && key[83] === false && key[65] === false) {
 				    myUI.moveAntRight(myAnt);
 				}
-				if (kc === 83) {
-			    //move down
+				if (key[83] === true && key[87] === false && key[68] === false && key[65] === false) {
 				    myUI.moveAntDown(myAnt);
 				}
-				if (kc === 65) {
-			    //move left
+				if (key[65] === true && key[87] === false && key[68] === false && key[83] === false) {
 				    myUI.moveAntLeft(myAnt);
-
 				}
-
-				
+				//console.log(key[e.keyCode]);
+				if (key[87] === true && key[68] === true && key[83] === false && key[65] === false) {
+					myUI.moveAntUpRight(myAnt);
+				}
+				if (key[87] === true && key[68] === false && key[83] === false && key[65] === true) {
+					myUI.moveAntUpLeft(myAnt);
+				}
+				if (key[87] === false && key[68] === true && key[83] === true && key[65] === false) {
+					myUI.moveAntDownRight(myAnt);
+				}
+				if (key[87] === false && key[68] === false && key[83] === true && key[65] === true) {
+					myUI.moveAntDownLeft(myAnt);
+				}
 			};
-			body.onkeyup = (e) => {
-                var myAnt = myUI.bySel(".ants");
-				
-				var color = myAnt.id.split('Ant');
-
-			    myAnt.style.backgroundImage = "url(css/images/" + color[0] + "Ant.png)";
-			};
+			
 			//alert("launch user pref");
 			//myUI.loadUserData(uFrame);
 			//myUI.loadProgressBar(uFrame);
+		},
+		moveAntDownLeft: (myAnt) => {
+			var mA = myAnt.style.left.split("px");
+			var mB = myAnt.style.bottom.split("px");
+			
+			myAnt.style.left = (+mA[0] - +5) + "px";
+			myAnt.style.bottom = (+mB[0] - +5) + "px";
+			myAnt.style.transform = 'rotate(-135deg)';
+			
+			var color = myAnt.id.split('Ant');
+			
+			myAnt.style.backgroundImage = "url(css/images/" + color[0] + "Ant.gif)";
+		},
+		moveAntDownRight: (myAnt) => {
+			var mA = myAnt.style.left.split("px");
+			var mB = myAnt.style.bottom.split("px");
+			
+			myAnt.style.left = (+mA[0] + +5) + "px";
+			myAnt.style.bottom = (+mB[0] - +5) + "px";
+			myAnt.style.transform = 'rotate(135deg)';
+			
+			var color = myAnt.id.split('Ant');
+			
+			myAnt.style.backgroundImage = "url(css/images/" + color[0] + "Ant.gif)";
+		},
+		moveAntUpLeft: (myAnt) => {
+			var mA = myAnt.style.left.split("px");
+			var mB = myAnt.style.bottom.split("px");
+			
+			myAnt.style.left = (+mA[0] - +5) + "px";
+			myAnt.style.bottom = (+mB[0] + +5) + "px";
+			myAnt.style.transform = 'rotate(-45deg)';
+			
+			var color = myAnt.id.split('Ant');
+			
+			myAnt.style.backgroundImage = "url(css/images/" + color[0] + "Ant.gif)";
+		},
+		moveAntUpRight: (myAnt) => {
+			var mA = myAnt.style.left.split("px");
+			var mB = myAnt.style.bottom.split("px");
+			
+			myAnt.style.left = (+mA[0] + +5) + "px";
+			myAnt.style.bottom = (+mB[0] + +5) + "px";
+			myAnt.style.transform = 'rotate(45deg)';
+			
+			var color = myAnt.id.split('Ant');
+			
+			myAnt.style.backgroundImage = "url(css/images/" + color[0] + "Ant.gif)";
 		},
 		moveAntRight: (myAnt) => {
 			//console.log(myAnt);

@@ -242,7 +242,7 @@ footer {
 
 }
 .ants {
-	transition:.5s transform ease-in-out;
+	transition:.5s transform;
 	width:6vh;
 	height:6vh;
 }
